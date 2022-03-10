@@ -1,72 +1,66 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const diceMaker = document.querySelector(".generate-die"); //Link to make dice
+  //Buttons in HTML
+  const diceMakerBtn = document.querySelector(".generate-die"); //Make Dice--> DOM Created Div
   const rollDiceBtn = document.querySelector(".roll-dice");
-  const diceContainer = document.querySelector("#dice-container");
   const diceSumBtn = document.querySelector(".dice-sum");
-  const sumContainer = document.querySelector(".sum-container");
-  const resetBtn = document.querySelector(".restart")
+  const resetBtn = document.querySelector(".restart");
 
+  //Containers in HTML
+  const sumContainer = document.querySelector(".sum-container");
+  const diceContainer = document.querySelector("#dice-container");
+
+  //Empty Arr for capturing the die
   let arr = [];
 
-  resetBtn.addEventListener("click", function(){
+  //Reload page to clear
+  resetBtn.addEventListener("click", function () {
     window.location.reload();
- })
-
-  diceMaker.addEventListener("click", function () {//Click to add dice
-    new Die(); // creates a new Die object from the Die class
-
   });
 
-  diceSumBtn.addEventListener("click", function() {
-     let sum = 0;
+//DOM Manipulations
+  diceMakerBtn.addEventListener("click", function () {
+    //Click to add dice
+    // creates a new Die object from the Die class
+    new Die();
+  });
 
-     arr.forEach(function(die) {
-       sum += die.value;
-     });
-     this.sum = document.createElement("div");
-     this.sum.textContent = `The total is ${sum}`;
-     
-     sumContainer.appendChild(this.sum);
-     diceSumBtn.addEventListener("click", function(){
-        sumContainer.reset();
-        move
-     });
-     
+  diceSumBtn.addEventListener("click", function () {
+    let sum = 0;
 
+    arr.forEach(function (die) {
+      sum += die.value;
+    });
 
-    // alert(sum);
+    this.sum = document.createElement("div");
+    this.sum.textContent = `The total is ${sum}`;
 
-      // document.createElement("div"); //?? I want it to appear screen 
-      // this.sum.textContent = "The total is " + this.value;
-      // sumContainer.appendChild(this.sum);
+    sumContainer.appendChild(this.sum);
+    diceSumBtn.addEventListener("click", function () {
+      sumContainer.reset();
       
-  })
+    });
+  });
 
-  
-
+//OOP Section 
   class Die {
     constructor() {
       this.element = document.createElement("div");
       this.element.className = "die";
       arr.push(this);
-      console.log(arr)
+      console.log(arr);
       // this.element.textContent = btnCounter;
       this.roll();
       this.element.style.cursor = "pointer";
       diceContainer.appendChild(this.element);
       rollDiceBtn.addEventListener("click", () => this.roll());
+
     }
 
     roll() {
       this.value = Math.floor(Math.random() * 100) + 1; //Random formula
-      this.element.textContent = this.value;//Puts the number on the dice
-
+      this.element.textContent = this.value; //Puts the number on the dice
     }
-   
-   
-
   }
-  
 });
 
 // roll() {
@@ -79,5 +73,3 @@ document.addEventListener("DOMContentLoaded", function () {
 // }
 
 
-
-// }
