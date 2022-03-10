@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+  
+    background-image: linear-gradient( yellow, green);
+    background-size: cover;
+    font-family: 'Fredoka';
+    font-weight: bolder;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    background-color: green;  
+
+}
+
+h1{
+    font-size: 7rem;
+    font-weight: 900;
+    color: #043a04 ;
+    text-shadow:     0 1px 0 hsl(174,5%,80%),   /*https://frontendresource.com/css-text-effects/ */
+    0 2px 0 hsl(174,5%,75%),
+    0 3px 0 hsl(174,5%,70%),
+    0 4px 0 hsl(174,5%,66%),
+    0 5px 0 hsl(174,5%,64%),
+    0 6px 0 hsl(174,5%,62%),
+    0 7px 0 hsl(174,5%,61%),
+    0 8px 0 hsl(174,5%,60%),
+
+    0 0 5px rgba(0,0,0,.05),
+   0 1px 3px rgba(0,0,0,.2),
+   0 3px 5px rgba(0,0,0,.2),
+  0 5px 10px rgba(0,0,0,.2),
+ 0 10px 10px rgba(0,0,0,.2),
+ 0 20px 20px rgba(0,0,0,.3);
+
+}
+.btn-container{
+    margin-bottom: 1.5rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    margin: 2.625rem;
+    padding: .655rem;
+    color: rgb(212, 210, 41);
+    background-color: #db2c2a;
+    font-size: 2rem;
+    border-radius: 2em;
+    cursor: pointer;
+
+    animation: mymove 6s infinite;      
+}
+@keyframes mymove {
+    50% {background-color: #082483;}
+  }
+
+.dice-container{
+    display: flex;
+    flex-direction: row;
+    margin: 3.5rem;
+    
+}
+.die {
+    display: inline-block;
+   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);  /*  https://bennettfeely.com/clippy/ */
+    height: 11.2rem;
+    width: 10rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2.50rem;
+    color: rgba(245, 241, 9, 0.973);
+    text-shadow:
+      0 0 5px #fff, /*https://frontendresource.com/css-text-effects/ */
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 40px #0ff,
+      0 0 80px #0ff,
+      0 0 90px #0ff,
+      0 0 100px #0ff,
+      0 0 150px #0ff;
+    /* background-color: green; */
+    background: linear-gradient(to bottom, #023002  0%, #023002 50%,50%,gold 50%,white 100%);
+    text-transform: uppercase;
+    animation: waviy 1s infinite; /* https://alvarotrigo.com/blog/css-text-animations/ */
+    animation-delay: calc(.1s * var(--i));
+}
+
+
+  
+
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+    
+.sum-container{
+    display: inline-block;
+    flex-direction: column; 
+    justify-content: center;
+    margin: 5.5rem;
+    font-size: xx-large;
+    color: aliceblue;
+
+}
+
+@font-face {
+    font-family: Foobar;
+    src: local('Times New Roman');
+    unicode-range: U+61-6E;
+}
+@font-face {
+    font-family: Foobar;
+    src: local('Arial');
+    unicode-range: U+6F-7A;
+}
+
