@@ -76,8 +76,20 @@ h1{
     display: inline-block;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  border: 3px solid black;
+  margin: 1em;
+    line-height: 80px;
 
-   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);  /*  https://bennettfeely.com/clippy/ */
+
+ 
+    /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);  /*  https://bennettfeely.com/clippy/ */
     height: 11.2rem;
     width: 10rem;
     margin: 1.5rem;
@@ -85,7 +97,7 @@ h1{
     border-radius: 10px;
     text-align: center;
     font-size: 2.50rem;
-    color: rgb(245, 241, 9);
+   
     text-shadow:
       0 0 5px #fff, /*https://frontendresource.com/css-text-effects/ */
       0 0 10px #fff,
@@ -97,13 +109,14 @@ h1{
       0 0 150px #0ff;
     /* background-color: green; */
     background: linear-gradient(to bottom, #023002  0%, #023002 50%,50%,gold 50%,white 100%);
-    text-transform: uppercase;
+    text-transform: uppercase; 
+
+
     animation: waviy 1s infinite; /* https://alvarotrigo.com/blog/css-text-animations/ */
-    animation-delay: calc(.1s * var(--i));
+    animation-delay: calc(.1s * var(--i)); 
+
+
 }
-
-
-  
 
 @keyframes waviy {
   0%,40%,100% {

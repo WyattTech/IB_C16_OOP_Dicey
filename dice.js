@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     roll() {
-      this.value = Math.floor(Math.random() * 100) + 1; //Random formula
+      this.value = Math.floor(Math.random() * 6) + 1; //Random formula
       this.element.textContent = this.value; //Puts the number on the dice
     }
   }
